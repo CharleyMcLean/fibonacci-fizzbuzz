@@ -12,7 +12,23 @@ import math
 
 def F(n):
     """Function to find nth Fibonacci number and return
-    a specified value"""
+    a specified value
+        >>> F(0)
+        0
+        >>> F(1)
+        1
+        >>> F(3)
+        2
+        >>> F(4)
+        'Buzz'
+        >>> F(5)
+        'Fizz'
+        >>> F(7)
+        'BuzzFizz'
+        >>> F(20)
+        'FizzBuzz'
+
+    """
     nth_fib = find_nth_fibonacci(n)
 
     prime = is_prime(nth_fib)
@@ -36,7 +52,22 @@ def F(n):
 
 
 def find_nth_fibonacci(n):
-    """Find nth term of Fibonacci sequence"""
+    """Find nth term of Fibonacci sequence
+        >>> find_nth_fibonacci(0)
+        0
+        >>> find_nth_fibonacci(1)
+        1
+        >>> find_nth_fibonacci(3)
+        2
+        >>> find_nth_fibonacci(4)
+        3
+        >>> find_nth_fibonacci(5)
+        5
+        >>> find_nth_fibonacci(7)
+        13
+        >>> find_nth_fibonacci(20)
+        6765
+    """
     Phi = (math.sqrt(5) + 1) / 2
     phi = Phi - 1
 
@@ -45,7 +76,22 @@ def find_nth_fibonacci(n):
 
 
 def is_prime(n):
-    """Determine if number is prime"""
+    """Determine if number is prime
+        >>> is_prime(0)
+        True
+        >>> is_prime(1)
+        True
+        >>> is_prime(2)
+        True
+        >>> is_prime(3)
+        True
+        >>> is_prime(4)
+        False
+        >>> is_prime(13)
+        True
+        >>> is_prime(6765)
+        False
+    """
     prime = True
     for i in range(2, n):
         if n % i == 0:
@@ -53,3 +99,15 @@ def is_prime(n):
             continue
 
     return prime
+
+
+#########################################################
+if __name__ == "__main__":
+    import doctest
+
+    result = doctest.testmod()
+
+    print
+    if not result.failed:
+        print "Success, all tests passed!"
+    print
