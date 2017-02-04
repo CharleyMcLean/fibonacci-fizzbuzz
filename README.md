@@ -1,12 +1,12 @@
 # Finonacci FizzBuzz
 
-Write a program generating the first n Fibonacci numbers F(n), printing
+Write a program generating the first `n` Fibonacci numbers `F(n)`, printing
 
-* "Buzz" when F(n) is divisible by 3.
-* "Fizz" when F(n) is divisible by 5.
-* "FizzBuzz" when F(n) is divisible by 15.
-* "BuzzFizz" when F(n) is prime.
-* The value F(n) otherwise.
+* `'Buzz'` when `F(n)` is divisible by 3.
+* `'Fizz'` when `F(n)` is divisible by 5.
+* `'FizzBuzz'` when `F(n)` is divisible by 15.
+* `'BuzzFizz'` when `F(n)` is prime.
+* The value `F(n)` otherwise.
 
 
 
